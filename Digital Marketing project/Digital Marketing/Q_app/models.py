@@ -22,7 +22,7 @@ class clientdetails(models.Model):
     username=models.CharField(max_length=50)
     password=models.BinaryField(max_length=100)
     def _enc(self, value):  #this function encrypt the password
-       conn = sql.connect(user='root',passwd='root',db='marketing')
+       conn = sql.connect(user='test',passwd='password',db='marketing',host='192.168.30.93')
        cur = conn.cursor()
        cur.execute("SELECT AES_ENCRYPT('{}','pass')".format(value))
        return cur.fetchone()[0]

@@ -17,7 +17,7 @@ from django.http import HttpRequest
 
 #mysql connection function
 def sqlconn():
-    conn = sql.connect(user='root',passwd='root',db='marketing')
+    conn = sql.connect(user='dmuser',passwd='admin',db='marketing',host='192.168.30.93')
     cur = conn.cursor()
     return cur,conn
 
